@@ -1,0 +1,27 @@
+.answer {
+  font-size: larger;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.answer-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.fade-in {
+  animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
