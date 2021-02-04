@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Questions.css"
 
 class Questions extends Component {
   constructor() {
@@ -17,12 +18,13 @@ class Questions extends Component {
     return (
       <form>
         <input
+          className="question-input"
           name="question"
           placeholder="Ask your question here"
           value={this.state.question}
           onChange={this.handleChange}
           />
-          <p>Click the 8-ball to ask your question</p>
+          <p className="info">Click the 8-ball to ask your question</p>
     </form>
   )
   }

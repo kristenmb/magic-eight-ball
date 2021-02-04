@@ -4,7 +4,7 @@ import "./EightBall.css"
 
 const EightBall = (props) => {
   return (
-    <article>
+    <article className="eight-ball" onClick={props.showAnswer}>
       <img 
         alt="Black eight ball" 
         src={eightball} 

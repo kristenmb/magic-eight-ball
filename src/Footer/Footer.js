@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <p>Make your own magic</p>
+    <p>Don't forget to make your own magic</p>
   )
 }
 

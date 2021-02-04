@@ -12,9 +12,13 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      isAnswerVisible: true,
+      isAnswerVisible: false,
       answers: allAnswers
     }
+  }
+
+  toggleAnswer = () => {
+    this.setState({ isAnswerVisible: !this.state.isAnswerVisible })
   }
 
   render() {
@@ -23,8 +27,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <Questions />
-        { !this.state.isAnswerVisible && <EightBall /> }
-        { this.state.isAnswerVisible && <Answer /> }
+        { !this.state.isAnswerVisible && <EightBall showAnswer={this.toggleAnswer}/> }
+        { this.state.isAnswerVisible && <Answer answers={this.state.answers} hideAnswer={this.toggleAnswer}/> }
         <Footer /> 
       </div>
   );
